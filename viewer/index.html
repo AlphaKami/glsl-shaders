@@ -19,9 +19,9 @@
 <body>
 <div id="bar">
   <select id="pick"></select>
-  <button id="pause">Pausa</button>
-  <button id="restart">Riavvia</button>
-  <a id="src" target="_blank" rel="noopener">codice</a>
+  <button id="pause">Pause</button>
+  <button id="restart">Restart</button>
+  <a id="src" target="_blank" rel="noopener">Code</a>
 </div>
 <canvas id="c"></canvas>
 <pre id="err"></pre>
@@ -94,7 +94,7 @@ async function loadShader(entry) {
   showError("");
   try {
     const res = await fetch(entry.path);
-    if (!res.ok) throw new Error("Impossibile caricare " + entry.path + " (" + res.status + ")");
+    if (!res.ok) throw new Error("Cannnot load " + entry.path + " (" + res.status + ")");
     const src = await res.text();
     const p = build(src);
     if (program) gl.deleteProgram(program);
@@ -153,7 +153,7 @@ canvas.addEventListener("pointermove", e => {
 document.getElementById("pause").onclick = e => {
   paused = !paused;
   if (!paused) t0 = performance.now() - tPaused;
-  e.target.textContent = paused ? "Riprendi" : "Pausa";
+  e.target.textContent = paused ? "Resume" : "Pause";
 };
 document.getElementById("restart").onclick = () => { t0 = performance.now(); tPaused = 0; frame = 0; };
 
@@ -173,7 +173,7 @@ document.getElementById("restart").onclick = () => { t0 = performance.now(); tPa
     await loadShader(start);
     requestAnimationFrame(render);
   } catch (e) {
-    showError("Errore nel leggere shaders.json: " + e.message);
+    showError("Error reading shaders.json: " + e.message);
   }
 })();
 </script>

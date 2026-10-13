@@ -1,5 +1,8 @@
-/*
-* Shader inspired by kishimisu's work
+/* 
+* Based on "Shader Art Coding Introduction" by kishimisu
+* https://www.shadertoy.com/view/mtyGWy
+* License: CC BY-NC-SA 3.0
+* Modified by: Alessandro Kummerlin di Querciavalle, 2023
 */
 
 #ifdef GL_ES

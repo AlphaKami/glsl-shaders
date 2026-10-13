@@ -1,3 +1,5 @@
+// Made by Alessandro Kummerlin di Querciavalle, 2023
+
 #ifdef GL_ES
 precision mediump float;
 #endif

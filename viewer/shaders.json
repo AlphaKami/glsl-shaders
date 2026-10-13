@@ -18,5 +18,20 @@
     "name": "fractal_glow",
     "title": "Fractal Glow",
     "path": "../shaders/Fractals/Fractal_Glow.frag"
+  },
+  {
+    "name": "fractal_raymarch",
+    "title": "Fractal Raymarch",
+    "path": "../shaders/Fractals/Fractal_Raymarch.frag"
+  },
+  {
+    "name": "raymarch1",
+    "title": "Moving Light Raymarch",
+    "path": "../shaders/Raymarch/MovingLight_Raymarch.frag"
+  },
+  {
+    "name": "raymarch2",
+    "title": "Shapes Raymarch",
+    "path": "../shaders/Raymarch/Shapes_Raymarch.frag"
   }
 ]
