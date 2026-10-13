@@ -1,0 +1,22 @@
+[
+  {
+    "name": "tesseract",
+    "title": "Tesseract 4D",
+    "path": "../shaders/Hypercube/4D_Hypercube_Rotation.frag"
+  },
+  {
+    "name": "tesseract_variant",
+    "title": "Tesseract 4D Variant",
+    "path": "../shaders/Hypercube/4D_Hypercube_Rotation_Variant.frag"
+  },
+  {
+    "name": "cube",
+    "title": "Cube 3D",
+    "path": "../shaders/Hypercube/3D_Cube_Rotation.frag"
+  },
+  {
+    "name": "fractal_glow",
+    "title": "Fractal Glow",
+    "path": "../shaders/Fractals/Fractal_Glow.frag"
+  }
+]
