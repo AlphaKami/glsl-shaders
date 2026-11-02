@@ -34,7 +34,7 @@ const errBox = document.getElementById("err");
 const pick = document.getElementById("pick");
 const srcLink = document.getElementById("src");
 
-if (!gl) { showError("WebGL2 non supportato da questo browser."); }
+if (!gl) { showError("WebGL2 is not supported for this browser."); }
 
 const VS_ES1 = `attribute vec2 a_pos; void main(){ gl_Position = vec4(a_pos, 0.0, 1.0); }`;
 const VS_ES3 = `#version 300 es
@@ -81,7 +81,6 @@ function collectUniforms(p) {
 
 function setVec(u, values) {
   if (!u) return;
-  gl.uniform1fv;
   switch (u.type) {
     case gl.FLOAT:      gl.uniform1f(u.loc, values[0]); break;
     case gl.FLOAT_VEC2: gl.uniform2f(u.loc, values[0], values[1]); break;
@@ -94,7 +93,7 @@ async function loadShader(entry) {
   showError("");
   try {
     const res = await fetch(entry.path);
-    if (!res.ok) throw new Error("Cannnot load " + entry.path + " (" + res.status + ")");
+    if (!res.ok) throw new Error("Cannot load " + entry.path + " (" + res.status + ")");
     const src = await res.text();
     const p = build(src);
     if (program) gl.deleteProgram(program);
